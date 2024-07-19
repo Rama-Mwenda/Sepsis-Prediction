@@ -7,10 +7,10 @@ from pydantic import BaseModel
 app = FastAPI() #instantiate FastAPI
 
 #load ml models and encoder
-forest = joblib.load("../models/RandomForest.joblib")
-ada = joblib.load("../models/Adaboost.joblib")
-logreg = joblib.load("../models/LogReg.joblib")
-encoder = joblib.load("../models/encoder.joblib")
+forest = joblib.load("RandomForest.joblib")
+ada = joblib.load("Adaboost.joblib")
+logreg = joblib.load("LogReg.joblib")
+encoder = joblib.load("encoder.joblib")
 
 
 #define input features
