@@ -1,0 +1,7 @@
+# .dockerignore
+.venv
+notebooks
+.git
+.gitignore
+LICENSE
+README.md
