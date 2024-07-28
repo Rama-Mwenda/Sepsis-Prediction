@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    volumes:
+      - ./api:/app
+      - ./models:/app/models
+      - ./data:/app/data
+    ports:
+      - "8000:8000"
+    depends_on:
+      - frontend
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    volumes:
+      - ./frontend:/app
+      - ./data:/app/data
+    ports:
+      - "8501:8501"
+
+volumes:
+  data:
+  models:
